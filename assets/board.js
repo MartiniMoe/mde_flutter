@@ -10,7 +10,7 @@ $(document).ready(function() {
         var params = new URLSearchParams();
         params.set('TID', $(this).attr('data-thread-id'));
 
-        var url = new URL('http://forum.mods.de/bb/thread.php');
+        var url = new URL('https://forum.mods.de/bb/thread.php');
         url.search = params;
 
         openUrl(url.toString());
@@ -22,7 +22,7 @@ $(document).ready(function() {
         params.set('TID', $(this).attr('data-thread-id'));
         params.set('page', $(this).attr('data-number-of-pages'));
 
-        var url = new URL('http://forum.mods.de/bb/thread.php');
+        var url = new URL('https://forum.mods.de/bb/thread.php');
         url.search = params;
 
         openUrl(url.toString());
@@ -38,7 +38,7 @@ $(document).ready(function() {
         params.set('BID', $('div.board').attr('data-board-id'));
         params.set('page', Number($('div.board').attr('data-page')) - 1);
 
-        var url = new URL('http://forum.mods.de/bb/board.php');
+        var url = new URL('https://forum.mods.de/bb/board.php');
         url.search = params;
 
         openUrl(url.toString());
@@ -49,7 +49,7 @@ $(document).ready(function() {
         params.set('BID', $('div.board').attr('data-board-id'));
         params.set('page', Number($('div.board').attr('data-page')) + 1);
 
-        var url = new URL('http://forum.mods.de/bb/board.php');
+        var url = new URL('https://forum.mods.de/bb/board.php');
         url.search = params;
 
         openUrl(url.toString());

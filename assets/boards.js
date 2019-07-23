@@ -12,7 +12,7 @@ $(document).ready(function() {
     });
 
     $('div.board').on('click', function() {
-        openUrl('http://forum.mods.de/bb/board.php?BID=' + $(this).attr('data-id'));
+        openUrl('https://forum.mods.de/bb/board.php?BID=' + $(this).attr('data-id'));
     });
 });
 

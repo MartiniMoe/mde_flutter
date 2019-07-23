@@ -48,7 +48,7 @@ class Thread with TemplateFiller {
   }
 
   _fetchThread() async {
-    debugPrint(Uri.http(
+    debugPrint(Uri.https(
       'forum.mods.de',
       'bb/xml/thread.php',
       {
@@ -62,7 +62,7 @@ class Thread with TemplateFiller {
     final Cookie sessionCookie = await MDEAccount.sessionCookie();
 
     HttpClient httpClient = HttpClient();
-    HttpClientRequest request = await httpClient.getUrl(Uri.http(
+    HttpClientRequest request = await httpClient.getUrl(Uri.https(
       'forum.mods.de',
       'bb/xml/thread.php',
       {

@@ -35,7 +35,7 @@ class MDEAccount {
     final Cookie sessionCookie = await MDEAccount.sessionCookie();
 
     HttpClient httpClient = HttpClient();
-    HttpClientRequest request = await httpClient.getUrl(Uri.http(
+    HttpClientRequest request = await httpClient.getUrl(Uri.https(
       'forum.mods.de',
       'bb/async/set-bookmark.php',
       {
@@ -111,7 +111,7 @@ class MDEAccount {
   }) async {
     HttpClient httpClient = HttpClient();
     HttpClientRequest request = await httpClient.postUrl(
-      Uri.http(
+      Uri.https(
         'login.mods.de',
         '',
       ),
@@ -149,12 +149,12 @@ class MDEAccount {
             document.getElementsByClassName('box success')[0];
 
         final html.Element iframe = div.getElementsByTagName('iframe')[0];
-        final String src = iframe.attributes['src'];
+        final String src = "https:" + iframe.attributes['src'];
 
         final Uri uri = Uri.parse(src);
         final int currentUserId = int.parse(uri.queryParameters['UID']);
 
-        // next open the page behind src (http://forum.mods.de/SSO.php?...) to
+        // next open the page behind src (https://forum.mods.de/SSO.php?...) to
         // get the correct cookie
         HttpClient httpClient = HttpClient();
         HttpClientRequest request = await httpClient.getUrl(Uri.parse(src));
@@ -255,7 +255,7 @@ class MDEAccount {
 
     HttpClient httpClient = HttpClient();
     HttpClientRequest request = await httpClient.getUrl(
-      Uri.http(
+      Uri.https(
         'forum.mods.de',
         'bb/index.php',
       ),
@@ -277,7 +277,7 @@ class MDEAccount {
         }
 
         if (!element.attributes['href']
-            .startsWith('http://login.mods.de/logout/')) {
+            .startsWith('https://login.mods.de/logout/')) {
           return false;
         }
 
@@ -288,7 +288,7 @@ class MDEAccount {
 
       HttpClient logoutHttpClient = HttpClient();
       HttpClientRequest logoutRequest = await logoutHttpClient.getUrl(
-        Uri.http(
+        Uri.https(
           'login.mods.de',
           '/logout/',
           {
@@ -330,7 +330,7 @@ class MDEAccount {
     final Cookie sessionCookie = await MDEAccount.sessionCookie();
 
     HttpClient httpClient = HttpClient();
-    HttpClientRequest request = await httpClient.getUrl(Uri.http(
+    HttpClientRequest request = await httpClient.getUrl(Uri.https(
       'forum.mods.de',
       'bb/async/remove-bookmark.php',
       {

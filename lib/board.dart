@@ -40,7 +40,7 @@ class Board with TemplateFiller {
   }
 
   _fetchBoard() async {
-    debugPrint(Uri.http(
+    debugPrint(Uri.https(
       'forum.mods.de',
       'bb/xml/board.php',
       {
@@ -52,7 +52,7 @@ class Board with TemplateFiller {
     final Cookie sessionCookie = await MDEAccount.sessionCookie();
 
     HttpClient httpClient = HttpClient();
-    HttpClientRequest request = await httpClient.getUrl(Uri.http(
+    HttpClientRequest request = await httpClient.getUrl(Uri.https(
       'forum.mods.de',
       'bb/xml/board.php',
       {

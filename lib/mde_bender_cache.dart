@@ -62,13 +62,13 @@ class MDEBenderCache {
       return false;
     }
 
-    debugPrint(Uri.http(
+    debugPrint(Uri.https(
       'forum.mods.de',
       url.join('bb', cleanUri),
     ).toString());
 
     HttpClient httpClient = HttpClient();
-    HttpClientRequest request = await httpClient.getUrl(Uri.http(
+    HttpClientRequest request = await httpClient.getUrl(Uri.https(
       'forum.mods.de',
       url.join('bb', cleanUri),
     ));

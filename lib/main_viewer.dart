@@ -342,7 +342,7 @@ class _MainViewerState extends State<MainViewer> with WidgetsBindingObserver {
     final Uri uri = Uri.parse(address);
 
     // intercept calls to the forum
-    if (uri.isScheme('http') && uri.host == 'forum.mods.de') {
+    if (uri.isScheme('https') && uri.host == 'forum.mods.de') {
       Uri localUri;
 
       if (uri.path == '/bb/board.php') {

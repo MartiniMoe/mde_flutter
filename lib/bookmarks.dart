@@ -74,7 +74,7 @@ class Bookmarks {
   }
 
   _fetchBookmarks() async {
-    debugPrint(Uri.http(
+    debugPrint(Uri.https(
       'forum.mods.de',
       'bb/xml/bookmarks.php',
     ).toString());
@@ -89,7 +89,7 @@ class Bookmarks {
 
     HttpClient httpClient = HttpClient();
     HttpClientRequest request = await httpClient.getUrl(
-      Uri.http(
+      Uri.https(
         'forum.mods.de',
         'bb/xml/bookmarks.php',
       ),

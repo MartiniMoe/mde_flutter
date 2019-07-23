@@ -92,7 +92,7 @@ void main() {
       final BBCodeDocument result =
           mdebbCodeParser.parse('[quote=1,1,"[CSF]Omega"][b]text[/b][/quote]');
       expect(result.toHtml(),
-          '<div class="quote"><a href="http://forum.mods.de/bb/thread.php?TID=1&PID=1" class="author"><i class="material-icons">&#xE244;</i>[CSF]Omega</a><div class="content">text</div></div>');
+          '<div class="quote"><a href="https://forum.mods.de/bb/thread.php?TID=1&PID=1" class="author"><i class="material-icons">&#xE244;</i>[CSF]Omega</a><div class="content">text</div></div>');
     },
   );
 

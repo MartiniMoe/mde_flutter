@@ -43,7 +43,7 @@ class Post {
   }
 
   _fetchPost() async {
-    debugPrint(Uri.http(
+    debugPrint(Uri.https(
       'forum.mods.de',
       'bb/xml/thread.php',
       {
@@ -55,7 +55,7 @@ class Post {
     final Cookie sessionCookie = await MDEAccount.sessionCookie();
 
     HttpClient httpClient = HttpClient();
-    HttpClientRequest request = await httpClient.getUrl(Uri.http(
+    HttpClientRequest request = await httpClient.getUrl(Uri.https(
       'forum.mods.de',
       'bb/xml/thread.php',
       {

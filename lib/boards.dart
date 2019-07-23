@@ -32,7 +32,7 @@ class Boards with TemplateFiller {
   }
 
   _fetchBoards() async {
-    debugPrint(Uri.http(
+    debugPrint(Uri.https(
       'forum.mods.de',
       'bb/xml/boards.php',
     ).toString());
@@ -41,7 +41,7 @@ class Boards with TemplateFiller {
 
     HttpClient httpClient = HttpClient();
     HttpClientRequest request = await httpClient.getUrl(
-      Uri.http(
+      Uri.https(
         'forum.mods.de',
         'bb/xml/boards.php',
       ),

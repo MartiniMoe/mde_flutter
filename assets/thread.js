@@ -77,7 +77,7 @@ $(document).ready(function() {
         params.set('TID', $('div.thread').attr('data-thread-id'));
         params.set('page', Number($('div.thread').attr('data-page')) - 1);
 
-        var url = new URL('http://forum.mods.de/bb/thread.php');
+        var url = new URL('https://forum.mods.de/bb/thread.php');
         url.search = params;
 
         openUrl(url.toString());
@@ -92,7 +92,7 @@ $(document).ready(function() {
         params.set('TID', $('div.thread').attr('data-thread-id'));
         params.set('page', Number($('div.thread').attr('data-page')) + 1);
 
-        var url = new URL('http://forum.mods.de/bb/thread.php');
+        var url = new URL('https://forum.mods.de/bb/thread.php');
         url.search = params;
 
         openUrl(url.toString());

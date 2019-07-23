@@ -401,7 +401,7 @@ class _PostEditorState extends State<PostEditor> {
   _sendPostEdit(BuildContext context) {
     return _send(
         context,
-        Uri.http(
+        Uri.https(
           'forum.mods.de',
           'bb/editreply.php',
         ),
@@ -421,7 +421,7 @@ class _PostEditorState extends State<PostEditor> {
   _sendPostNew(BuildContext context) {
     _send(
         context,
-        Uri.http(
+        Uri.https(
           'forum.mods.de',
           'bb/newreply.php',
         ),
@@ -441,7 +441,7 @@ class _PostEditorState extends State<PostEditor> {
   _sendThreadNew(BuildContext context) {
     return _send(
         context,
-        Uri.http(
+        Uri.https(
           'forum.mods.de',
           'bb/newthread.php',
         ),

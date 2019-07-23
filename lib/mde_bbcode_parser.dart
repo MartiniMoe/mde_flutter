@@ -43,7 +43,7 @@ class _QuoteTag extends BBCodeTag {
       author = HtmlEscape().convert(author);
 
       return '<div class="quote">'
-          '<a href="http://forum.mods.de/bb/thread.php?TID=$threadId&PID=$postId" class="author">'
+          '<a href="https://forum.mods.de/bb/thread.php?TID=$threadId&PID=$postId" class="author">'
           '<i class="material-icons">&#xE244;</i>'
           '$author</a>'
           '<div class="content">$innerHtml</div>'
