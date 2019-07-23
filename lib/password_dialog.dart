@@ -50,6 +50,7 @@ class _PasswordDialogState extends State<PasswordDialog> {
         Padding(
           child: TextField(
             obscureText: true,
+            enableInteractiveSelection: true,
             onChanged: (final String content) {
               password = content;
             },
